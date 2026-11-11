@@ -1,5 +1,11 @@
 # AsyncKeychain
 
+[![Swift](https://img.shields.io/badge/Swift-6.0%2B-F05138?style=flat-square)](https://www.swift.org)
+[![Platforms](https://img.shields.io/badge/Platforms-iOS_macOS_Mac_Catalyst_visionOS-yellowgreen?style=flat-square)](#asynckeychain)
+[![Swift Package Manager](https://img.shields.io/badge/Swift_Package_Manager-compatible-orange?style=flat-square)](#installation)
+[![CI](https://img.shields.io/github/actions/workflow/status/ValeriiSohlaiev/AsyncKeychain/ci.yml?branch=main&style=flat-square&label=CI)](https://github.com/ValeriiSohlaiev/AsyncKeychain/actions/workflows/ci.yml)
+[![License](https://img.shields.io/badge/License-MIT-blue?style=flat-square)](LICENSE)
+
 A small Swift 6 wrapper around the keychain with an `async`/`await` API.
 A from-scratch rewrite of the core of [KeychainAccess](https://github.com/kishikawakatsumi/KeychainAccess).
 
