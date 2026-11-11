@@ -1,0 +1,32 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  macos:
+    name: macOS
+    runs-on: macos-15
+    steps:
+      - uses: actions/checkout@v4
+      - name: Test
+        run: swift test
+
+  ios:
+    name: iOS Simulator
+    runs-on: macos-15
+    steps:
+      - uses: actions/checkout@v4
+      - name: Test in host app
+        working-directory: TestHost
+        run: |
+          xcodebuild test \
+            -project TestHost.xcodeproj \
+            -scheme TestHost \
+            -destination "platform=iOS Simulator,name=iPhone 16"
